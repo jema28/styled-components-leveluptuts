@@ -1,13 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Heading = styled.h1`
-  font-size: 2rem;
+const color = 'white'
+
+const AppWrapper = styled.div`
+  header {
+    &:hover {
+      background: tomato;
+      color: white;
+    }
+  }
 `
 
 const Button = styled.button`
   font-size: 1rem;
-  color: white;
+  color: ${color};
   padding: 5px 10px;
   margin: 5px;
   border: none;
@@ -17,11 +24,13 @@ const Button = styled.button`
 
 const App = () => {
   return (
-    <>
-      <Heading>Starter</Heading>
+    <AppWrapper>
+      <header>
+        <h1>Starter</h1>
+      </header>
       <Button>Save</Button>
       <Button type="cancel">Cancel</Button>
-    </>
+    </AppWrapper>
   )
 }
 
