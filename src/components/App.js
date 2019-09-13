@@ -17,7 +17,9 @@ const App = () => (
     >
       <Card>
         <h2>Card Heading</h2>
-        <Card.Button modifiers="cancel">Say Hello</Card.Button>
+        <Card.Button as="a" modifiers="cancel">
+          Say Hello
+        </Card.Button>
       </Card>
       <Button modifiers="small">Save</Button>
       <Button modifiers={['small', 'cancel']}>Cancel</Button>
