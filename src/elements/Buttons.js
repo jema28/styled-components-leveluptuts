@@ -6,8 +6,8 @@ const BUTTON_MODIFIERS = {
   small: () => `
     font-size: 0.5rem;
   `,
-  cancel: () => `
-    background: tomato;
+  cancel: ({ theme }) => `
+    background: ${theme.colors.accent};
   `
 }
 
@@ -18,7 +18,7 @@ export const Button = styled.button`
   margin: 5px;
   border: none;
   border-radius: 4px;
-  background: indigo;
+  background: ${({ theme: { colors } }) => colors.primary};
   transition: 0.3s ease box-shadow;
 
   &:hover {
