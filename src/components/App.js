@@ -7,10 +7,8 @@ const App = () => (
   <>
     <GlobalStyle />
     <Header />
-    <Button size="small">Save</Button>
-    <Button type="cancel" top="20">
-      Cancel
-    </Button>
+    <Button modifiers="small">Save</Button>
+    <Button modifiers={['small', 'cancel']}>Cancel</Button>
   </>
 )
 

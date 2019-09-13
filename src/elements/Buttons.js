@@ -1,5 +1,15 @@
 import styled from 'styled-components'
+import { applyStyleModifiers } from 'styled-components-modifiers'
 import { elevation } from '../utilities'
+
+const BUTTON_MODIFIERS = {
+  small: () => `
+    font-size: 0.5rem;
+  `,
+  cancel: () => `
+    background: tomato;
+  `
+}
 
 export const Button = styled.button`
   font-size: 1rem;
@@ -15,19 +25,5 @@ export const Button = styled.button`
     ${elevation[2]};
   }
 
-  ${({ size }) => {
-    if (size === 'small') {
-      return `font-size: 0.5rem`
-    }
-  }}
-
-  ${({ type }) => {
-    if (type === 'cancel') {
-      return `
-      background: tomato;
-      &:hover {
-        ${elevation[2]};
-      `
-    }
-  }}
+  ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `
