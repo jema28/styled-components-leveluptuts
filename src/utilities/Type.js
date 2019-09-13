@@ -1,3 +1,3 @@
 export const serif = `
-  font-family: Georgia;
+  /* insert styles here */
 `
