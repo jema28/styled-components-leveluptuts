@@ -12,7 +12,7 @@ export const Header = ({ className }) => (
 export default styled(Header)`
   ${serif}
   background: ${purple};
-  padding: 10px 5%;
+  padding: 2px 2%;
   width: 100%;
   ${fixed()}
   ${elevation[2]}
