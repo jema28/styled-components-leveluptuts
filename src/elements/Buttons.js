@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { lighten } from 'polished'
-import { purple, elevation } from '../utilities'
+import { elevation } from '../utilities'
 
 export const Button = styled.button`
   font-size: 1rem;
@@ -13,7 +12,6 @@ export const Button = styled.button`
   transition: 0.3s ease box-shadow;
 
   &:hover {
-    background: ${lighten(0.1, purple)};
     ${elevation[2]};
   }
 
@@ -28,7 +26,6 @@ export const Button = styled.button`
       return `
       background: tomato;
       &:hover {
-        background: ${lighten(0.1, 'tomato')};
         ${elevation[2]};
       `
     }
