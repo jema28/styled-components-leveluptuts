@@ -3,15 +3,6 @@ import styled from 'styled-components'
 
 const color = 'white'
 
-const AppWrapper = styled.div`
-  header {
-    &:hover {
-      background: tomato;
-      color: white;
-    }
-  }
-`
-
 const Button = styled.button`
   font-size: 1rem;
   color: ${color};
@@ -19,19 +10,34 @@ const Button = styled.button`
   margin: 5px;
   border: none;
   border-radius: 4px;
-  background: ${({ type }) => (type === 'cancel' ? 'tomato' : 'indigo')};
+  background: indigo;
 `
 
-const App = () => {
-  return (
-    <AppWrapper>
-      <header>
-        <h1>Starter</h1>
-      </header>
-      <Button>Save</Button>
-      <Button type="cancel">Cancel</Button>
-    </AppWrapper>
-  )
-}
+const CancelButton = styled(Button)`
+  background: tomato;
+`
+
+const AppWrapper = styled.div`
+  header {
+    &:hover {
+      background: tomato;
+      color: white;
+    }
+  }
+  ${Button} {
+    margin-bottom: 2rem;
+  }
+`
+
+const App = () => (
+  <AppWrapper>
+    <header>
+      <h1>Starter</h1>
+    </header>
+
+    <Button>Save</Button>
+    <CancelButton>Cancel</CancelButton>
+  </AppWrapper>
+)
 
 export default App
