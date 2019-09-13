@@ -1,6 +1,6 @@
 import React from 'react'
 import GlobalStyle from '../Global'
-import { Header } from '../layouts'
+import Header from '../layouts/Header'
 import { Button, CancelButton } from '../elements'
 
 const App = () => (
