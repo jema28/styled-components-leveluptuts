@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import GlobalStyle from '../Global'
 
 const sizes = {
   mobileS: 320,
@@ -55,6 +56,7 @@ const AppWrapper = styled.div`
 
 const App = () => (
   <AppWrapper>
+    <GlobalStyle />
     <header>
       <h1>Starter</h1>
     </header>
