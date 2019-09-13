@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { fixedTop } from '../utilities'
 
 export const Button = styled.button`
   font-size: 1rem;
@@ -13,5 +12,4 @@ export const Button = styled.button`
 
 export const CancelButton = styled(Button)`
   background: tomato;
-  ${fixedTop}
 `
