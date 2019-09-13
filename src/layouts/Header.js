@@ -12,6 +12,6 @@ export const Header = ({ className }) => (
 export default styled(Header)`
   background: ${purple};
   padding: 10px 5%;
-  ${fixed({ x: 0, y: 0 })}
+  ${fixed({ y: '40' })}
   ${elevation[2]}
 `
