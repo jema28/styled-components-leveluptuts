@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const sizes = {
   mobileS: 320,
@@ -16,6 +16,13 @@ const device = Object.keys(sizes).reduce((acc, cur) => {
   return acc
 }, {})
 
+//  CSS Helper
+const fixedTop = css`
+  position: fixed;
+  top: ${({ top }) => top + 'px'};
+  left: 0;
+`
+
 const Button = styled.button`
   font-size: 1rem;
   color: white;
@@ -28,6 +35,7 @@ const Button = styled.button`
 
 const CancelButton = styled(Button)`
   background: tomato;
+  ${fixedTop}
 `
 
 const AppWrapper = styled.div`
@@ -50,9 +58,8 @@ const App = () => (
     <header>
       <h1>Starter</h1>
     </header>
-
     <Button>Save</Button>
-    <CancelButton>Cancel</CancelButton>
+    <CancelButton top="100">Cancel</CancelButton>
   </AppWrapper>
 )
 
