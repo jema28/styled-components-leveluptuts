@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Heading } from '../elements'
-import { purple, elevation, fixed } from '../utilities'
+import { purple, elevation, fixed, serif } from '../utilities'
 
 export const Header = ({ className }) => (
   <header className={className}>
@@ -10,8 +10,10 @@ export const Header = ({ className }) => (
 )
 
 export default styled(Header)`
+  ${serif}
   background: ${purple};
   padding: 10px 5%;
-  ${fixed({ y: '40' })}
+  width: 100%;
+  ${fixed()}
   ${elevation[2]}
 `
